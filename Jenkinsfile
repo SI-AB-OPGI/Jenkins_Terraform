@@ -22,12 +22,12 @@ pipeline {
             }
         stage('terraform plan') {
             steps {
-               sh 'terraform plan'
+               sh 'terraform plan -plan=fplan.out'
               }
             }
         stage('terraform apply') {
             steps {
-               sh 'terraform apply'
+               sh 'terraform apply -auto -approve tfplan.out'
               }
             }
 }
