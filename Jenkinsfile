@@ -7,7 +7,7 @@ pipeline {
    stages {
         stage('SCM') {
             steps {
-              git url : 'https://github.com/SI-AB-OPGI/Jenkins_Terraform.git' , branch : master
+              git url : 'https://github.com/SI-AB-OPGI/Jenkins_Terraform.git' , branch : 'master'
               }
            }
         stage('terraform init') {
